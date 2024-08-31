@@ -1,0 +1,27 @@
+/node_modules
+/vendor
+/bower_components
+/.bundle
+/.git
+/.svn
+/.hg
+/.idea
+/.vscode
+/.DS_Store
+
+package-lock.json
+
+# Compiled assets
+/build
+/dist
+/public
+
+# Log files
+*.log
+
+# IDE specific files
+*.swp
+*.bak
+*.tmp
+*.sync
+*.log

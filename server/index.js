@@ -27,7 +27,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors()); // Allow cross-origin requests
+app.use(cors({ origin: "*" })); // Allow cross-origin requests
 
 const sendTicketMail = (base64String, email = null, ticket_id) => {
   if (email === null || email == "null") {

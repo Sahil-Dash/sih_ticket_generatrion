@@ -171,7 +171,7 @@ app.get("/api/generate-image/:ticketid/:emailid", async (req, res) => {
   await genimage(tid).catch((err) => console.error(err));
 
   // Wait 2 secs for the genimage resolve and file is created successfully..
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
 
   const ticketFile = "./rsc_tickettemp.png";
 

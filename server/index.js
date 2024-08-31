@@ -27,7 +27,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors({ origin: "*" })); // Allow cross-origin requests
+app.use(cors({ origin: ["http://localhost:5173/"] }));
 
 const sendTicketMail = (base64String, email = null, ticket_id) => {
   if (email === null || email == "null") {
@@ -200,6 +200,9 @@ app.get("/", (req, res) => {
   res.json({ msg: "Server is working..." });
 });
 
+app.get("/check", (req, res) => {
+  res.json({ msg: "Server is checked..." });
+});
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

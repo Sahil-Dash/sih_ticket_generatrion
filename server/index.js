@@ -173,7 +173,7 @@ app.get("/api/generate-image/:ticketid/:emailid", async (req, res) => {
   // Wait 2 secs for the genimage resolve and file is created successfully..
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  const ticketFile = "./ticket.png";
+  const ticketFile = "./rsc_tickettemp.png";
 
   fs.readFile(ticketFile, (err, data) => {
     if (err) {
